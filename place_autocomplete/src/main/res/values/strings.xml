@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PlaceAutocomplete</string>
+
+    <string name="enter_location_name">Enter location name</string>
+    <string name="sample_place">Sample Place</string>
+    <string name="sample_place_formatted_address">Sample place formatted address</string>
+    <string name="enter_location_hint">Search for your route</string>
+    <string name="todo">TODO</string>
+    <string name="search_title">Enter location</string>
+    <string name="searchPlaceHolder">searchPlaceHolder</string>
+    <string name="enter_some_location">Enter some location</string>
+    <string name="location_not_found">Location not found</string>
+    <string name="please_check_spell_errors">Please check spell errors in name..</string>
+</resources>

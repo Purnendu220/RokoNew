@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MySos">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/contactRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/layoutAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_below="@id/contactRecycler"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/loading"
+                android:src="@android:drawable/ic_input_add"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/action_sub_header"
+                android:text="@string/add_your_sos"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

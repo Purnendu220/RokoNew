@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:behavior_peekHeight="100dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+
+    <RelativeLayout
+        android:id="@+id/routeListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/yellow">
+
+        <TextView
+            android:id="@+id/textRouteCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/action_header"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginEnd="70dp"/>
+
+        <ImageView
+            android:id="@+id/listIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/loading"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/loading"
+        android:alpha=".5" />
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/locationRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        />
+
+</RelativeLayout>

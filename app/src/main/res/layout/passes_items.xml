@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/passLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:padding="5dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/passImg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/loading"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/passName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@id/passImg"
+        android:textSize="@dimen/main_header"
+        android:text="Pass 1"/>
+
+    <TextView
+        android:id="@+id/costPasses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:text="2 rides Extra"
+        android:textSize="@dimen/item_text_size"
+        android:background="@drawable/button_rectangle_sign_up"/>
+
+    <TextView
+        android:id="@+id/descPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/passImg"
+        android:layout_below="@id/passName"
+        android:layout_marginTop="2dp"
+        android:textSize="@dimen/main_sub_header"
+        android:text="this is the desc pass."/>
+
+    <TextView
+        android:id="@+id/totalRides"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/passImg"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/descPass"
+        android:textColor="@color/green"
+        android:textSize="@dimen/item_text_size"/>
+
+    <TextView
+        android:id="@+id/bonusRides"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/totalRides"
+        android:layout_marginStart="2dp"
+        android:layout_below="@id/descPass"
+        android:textSize="@dimen/item_text_size"
+        android:textColor="@color/red"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/complimentaryValidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/bonusRides"
+        android:textSize="@dimen/item_web_view"/>
+
+
+</RelativeLayout>

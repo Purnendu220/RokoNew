@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ReferAndEarn">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="20dp"
+            android:src="@android:drawable/ic_dialog_email"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/loading"/>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image1"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:text="Share your invite code to 9454907775 with friends"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/sharetv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp"
+        android:text="Share your invite code "/>
+
+    <TextView
+        android:id="@+id/nametv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/yellow"
+        android:layout_gravity="center_horizontal"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:text="9454907775"/>
+
+    <Button
+        android:id="@+id/inviteButton"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:text="@string/invite"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="design_fab_size_mini" tools:override="true">45dp</dimen>
+    <dimen name="design_fab_image_size" tools:override="true">18dp</dimen>
+
+    <dimen name="header">24sp</dimen>
+    <dimen name="via_header">22sp</dimen>
+    <dimen name="action_header">20sp</dimen>
+    <dimen name="action_sub_header">18sp</dimen>
+    <dimen name="main_header">16sp</dimen>
+    <dimen name="main_sub_header">14sp</dimen>
+    <dimen name="item_text_size">12sp</dimen>
+    <dimen name="sub_item_size">10sp</dimen>
+    <dimen name="item_web_view">8sp</dimen>
+    <dimen name="sub_item_view">6sp</dimen>
+    <dimen name="mini_item_web_view">5sp</dimen>
+    <dimen name="sub_item_web_view">6dp</dimen>
+</resources>

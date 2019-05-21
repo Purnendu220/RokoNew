@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SuggestNewRoute"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/suggest_new_route"
+                android:contentDescription="@string/loading"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:textSize="@dimen/action_sub_header"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:text="@string/suggest_new_route"/>
+
+            <LinearLayout
+                android:id="@+id/rlOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/loading"
+                    android:src="@drawable/ic_map_from_"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvNewOrigin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/main_header"
+                        android:hint="@string/select_origin_point"
+                        android:layout_centerVertical="true"
+                        android:maxLines="1"
+                        android:layout_marginStart="10dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_margin="5dp"
+                        android:layout_below="@id/tvNewOrigin"
+                        android:background="@color/dark_grey"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rlDest"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_map_to"
+                    android:contentDescription="@string/loading"/>
+
+                <RelativeLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvNewRouteDest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/main_header"
+                        android:hint="@string/select_destination_point"
+                        android:layout_marginStart="5dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_margin="5dp"
+                        android:layout_below="@id/tvNewRouteDest"
+                        android:background="@color/dark_grey"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/action_sub_header"
+                    android:textColor="@color/black"
+                    android:text="@string/your_preferred_time_slots"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2.5"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:textSize="@dimen/main_header"
+                            android:text="@string/_1_morning_slot"/>
+
+                        <TextView
+                            android:id="@+id/morningHomeLeave"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/button_rectangle_yellow_outline"
+                            android:textSize="@dimen/main_header"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="5dp"
+                            android:hint="@string/time_you_leave_home"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight=".1"
+                        android:layout_height=".1dp"
+                        android:background="@android:color/transparent"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:textSize="@dimen/main_header"
+                            android:text="@string/_2_evening_slot"/>
+
+                        <TextView
+                            android:id="@+id/eveningOfficeLeave"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="5dp"
+                            android:background="@drawable/button_rectangle_yellow_outline"
+                            android:textSize="@dimen/main_header"
+                            android:gravity="center"
+                            android:hint="@string/time_you_leave_office"/>
+
+                    </LinearLayout>
+
+                    <!--<TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="40dp"
+                        android:background="@drawable/button_rectangle_yellow_outline"
+                        android:textSize="@dimen/main_header"
+                        android:gravity="center"
+                        android:hint="@string/time_you_leave_office"/>-->
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonSearchNewRoute"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_rectangle_sign_up"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="@string/suggest_for_route"
+                android:textSize="@dimen/main_header"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

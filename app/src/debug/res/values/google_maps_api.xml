@@ -1,0 +1,29 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=E1:85:97:F3:35:32:93:5C:1B:59:E4:AE:93:AC:1F:CA:E7:C5:AB:56%3Bcom.rokoapp.activity
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    E1:85:97:F3:35:32:93:5C:1B:59:E4:AE:93:AC:1F:CA:E7:C5:AB:56
+
+    SHA-1 certificate fingerprint:
+    E1:85:97:F3:35:32:93:5C:1B:59:E4:AE:93:AC:1F:CA:E7:C5:AB:56
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <!--<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCqpmNJvuXegxmzsbzoghbXlipzrCOC-8o</string>-->
+    <!--<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCWvJDKVUfvFqUN9sIC3bpFieR89wz1_Hg</string>-->
+    <!--<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDdzo7x0TTwv8HOyBKg359MBeR1s1kRLZ8</string>-->
+    <!--<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyD794KKI3H8lpSPGufCEnRIPXNE9bf-IXw</string>-->
+    <!--<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBulRLe-bT31SrVsIg1C7TdMMNmu2LYDRE</string>-->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAsOByI5ByaQCyzDqNyKyNZ4tmuXaDxW2E</string>
+</resources>

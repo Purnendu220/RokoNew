@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="5dp"
+    app:cardBackgroundColor="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/couponName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/main_header"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            android:text="MyFIRSTRIDEFREE"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/validityCoupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="5dp"
+            android:textSize="@dimen/main_sub_header"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/couponName"
+            android:layout_marginTop="5dp"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/couponDesc"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/main_header"
+                android:text="MyFIRSTRIDEFREE"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/copyCouponCode"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/action_sub_header"
+                android:textStyle="bold"
+                android:text="@string/apply"
+                android:textColor="@color/green"
+                android:gravity="center"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

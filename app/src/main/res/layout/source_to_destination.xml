@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:behavior_peekHeight="110dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+
+    <RelativeLayout
+        android:id="@+id/routeListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:background="@color/yellow">
+
+        <TextView
+            android:id="@+id/textRouteCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/action_header"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginEnd="70dp"/>
+
+        <ImageView
+            android:id="@+id/listIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/loading"/>
+    </RelativeLayout>
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/black"
+      android:layout_marginTop="110dp"
+      android:contentDescription="@string/loading"
+      android:alpha=".5" />
+
+  <!--<TextView
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:layout_marginTop="50dp"
+      android:background="@drawable/action_bar"
+      android:gravity="center"
+      android:textSize="@dimen/action_sub_header"
+      android:textColor="@color/white"
+      android:text="Select Your Route"/>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/locationRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="115dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"/>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/b"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_rectangle_sign_up"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Book your seat"
+            android:textSize="@dimen/action_sub_header"/>
+
+    </LinearLayout>-->
+</RelativeLayout>

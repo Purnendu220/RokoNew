@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.SelectShortestRoute">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/lighter_gray">
+
+        <include layout="@layout/shortest_route_toolbar"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="40dp">
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:cardCornerRadius="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/seatLl"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:baselineAligned="false">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/main_header"
+                                    android:textColor="@color/black"
+                                    android:text="Total Seats:"/>
+
+                                <TextView
+                                    android:id="@+id/totalSeats"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="6dp"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical|end"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/main_header"
+                                    android:textColor="@color/black"
+                                    android:text="Available Seats:"/>
+
+                                <TextView
+                                    android:id="@+id/availableSeats"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="6dp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:orientation="vertical"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:id="@+id/pickupLl"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.4"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/main_header"
+                                        android:text="Pickup Point:"/>
+
+                                    <TextView
+                                        android:id="@+id/pickupLocation"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:textColor="@color/black"
+                                        android:layout_marginStart="5dp"
+                                        android:textSize="@dimen/main_header"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:padding="2dp"
+                                        android:src="@drawable/ic_pickup_marker"/>
+
+                                    <TextView
+                                        android:id="@+id/pickupPointDistance"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/black"
+                                        android:layout_marginStart="10dp"
+                                        android:textSize="@dimen/main_header"/>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:gravity="center_vertical"
+                                android:layout_weight=".2">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/colorAccent"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.4"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/main_header"
+                                        android:text="Drop Point:"/>
+
+                                    <TextView
+                                        android:id="@+id/dropLocation"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:textColor="@color/black"
+                                        android:layout_marginStart="5dp"
+                                        android:textSize="@dimen/main_header"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:padding="2dp"
+                                        android:src="@drawable/ic_drop_marker"/>
+
+                                    <TextView
+                                        android:id="@+id/dropPointDistance"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:layout_gravity="center_vertical"
+                                        android:textColor="@color/black"
+                                        android:layout_marginStart="10dp"
+                                        android:textSize="@dimen/main_header"/>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/viewRoute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:background="@drawable/button_rectangle_sign_up"
+                            android:layout_gravity="end"
+                            android:textSize="@dimen/main_header"
+                            android:textColor="@color/white"
+                            android:layout_marginEnd="10dp"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="5dp"
+                            android:textAllCaps="false"
+                            android:text="View Route"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/lLTimeSchedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/dateBusStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/main_header"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/originTime"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/main_sub_header"/>
+
+                        <TextView
+                            android:id="@+id/destTime"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/main_sub_header"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorPrimary"/>
+
+                    <Button
+                        android:id="@+id/bookRide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@drawable/button_rectangle_sign_up"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"
+                        android:textSize="@dimen/main_header"
+                        android:textColor="@color/white"
+                        android:layout_marginEnd="10dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textAllCaps="false"
+                        android:text="Book Ride"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/errorLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/button_rectangle_yellow_outline">
+
+                    <!--<ImageView
+                        android:layout_width="250dp"
+                        android:layout_height="125dp"
+                        android:contentDescription="@string/todo"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/oops_icon"/>-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="40sp"
+                        android:textColor="@color/black"
+                        android:text="@string/oops"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/via_header"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:text="@string/dont_have_pass"/>
+
+                    <TextView
+                        android:id="@+id/errorMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/main_sub_header"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/red"
+                        android:visibility="gone"/>
+
+                    <Button
+                        android:id="@+id/buyRoutePass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:gravity="center"
+                        android:textColor="@color/green"
+                        android:background="@drawable/button_rectangle_pay"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:textAllCaps="false"
+                        android:text="Buy Pass"
+                        android:textSize="@dimen/main_header"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+    <include layout="@layout/source_to_destination"/>
+
+</android.support.design.widget.CoordinatorLayout>

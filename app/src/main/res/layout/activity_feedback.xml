@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.Feedback">
+    <include layout="@layout/toolbar"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/action_sub_header"
+                android:text="How would you rate us?"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"/>
+
+
+            <RatingBar
+                android:id="@+id/rateBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:numStars="5"
+                android:rating="0" />
+
+            <LinearLayout
+                android:id="@+id/paramLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2.5"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/lateArrivalIssue"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="60dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/button_rectangle_yellow_outline">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center_horizontal"
+                            android:contentDescription="@string/loading"
+                            android:src="@drawable/late_arrival"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="@dimen/main_header"
+                            android:layout_marginTop="3dp"
+                            android:text="Late Arrival"/>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight=".1"
+                        android:layout_height="2dp"
+                        android:background="@android:color/transparent"/>
+
+                    <LinearLayout
+                        android:id="@+id/busNotClean"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="60dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/button_rectangle_yellow_outline">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:contentDescription="@string/loading"
+                            android:src="@drawable/bus_not_clean"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="@dimen/main_header"
+                            android:layout_marginTop="3dp"
+                            android:text="vehicle not clean"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2.5"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/issueWithApp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="60dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/button_rectangle_yellow_outline">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center_horizontal"
+                            android:contentDescription="@string/loading"
+                            android:src="@drawable/issue_app"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="@dimen/main_header"
+                            android:layout_marginTop="3dp"
+                            android:text="Issue with app"/>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight=".1"
+                        android:layout_height="2dp"
+                        android:background="@android:color/transparent"/>
+
+                    <LinearLayout
+                        android:id="@+id/routeIssue"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="60dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/button_rectangle_yellow_outline">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:contentDescription="@string/loading"
+                            android:src="@drawable/inconvinient_route"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="@dimen/main_header"
+                            android:layout_marginTop="3dp"
+                            android:text="Inconvenient route"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2.5"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/notFriendlyStaff"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="60dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/button_rectangle_yellow_outline">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:contentDescription="@string/loading"
+                            android:src="@drawable/staff_not_helpful"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="@dimen/main_header"
+                            android:layout_marginTop="3dp"
+                            android:text="Staff not helpful"/>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight=".1"
+                        android:layout_height="2dp"
+                        android:background="@android:color/transparent"/>
+
+                    <LinearLayout
+                        android:id="@+id/rudeDriver"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="60dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/button_rectangle_yellow_outline">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center_horizontal"
+                            android:contentDescription="@string/loading"
+                            android:src="@drawable/rude_driver"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="@dimen/main_header"
+                            android:layout_marginTop="3dp"
+                            android:text="Rude driver"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2.5"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/acIssue"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="60dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/button_rectangle_yellow_outline">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:contentDescription="@string/loading"
+                            android:src="@drawable/issue_ac"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="@dimen/main_header"
+                            android:layout_marginTop="3dp"
+                            android:text="AC is not working"/>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight=".1"
+                        android:layout_height="2dp"
+                        android:background="@android:color/transparent"/>
+
+                    <LinearLayout
+                        android:id="@+id/otherIssue"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="60dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/button_rectangle_yellow_outline">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerInside"
+                            android:layout_gravity="center_horizontal"
+                            android:contentDescription="@string/loading"
+                            android:src="@drawable/others"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textSize="@dimen/main_header"
+                            android:layout_marginTop="3dp"
+                            android:text="Others"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/editTextFeedBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:hint="@string/remark"
+                android:gravity="start"
+                android:background="@drawable/button_rectangle_yellow_outline"
+                android:inputType="text|textMultiLine|textCapSentences"
+                android:maxLength="3000"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/submitRating"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_rectangle_sign_up"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/submit_feedback"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

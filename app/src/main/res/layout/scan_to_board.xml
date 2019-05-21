@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/bottomSheetFrag"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:behavior_peekHeight="270dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:id="@+id/scanToBoardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/scanToBoardRl"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/colorPrimary">
+
+                <TextView
+                    android:id="@+id/textRouteCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:layout_marginStart="@dimen/action_header"
+                    android:textSize="@dimen/action_sub_header"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="70dp"
+                    android:text="Scan to board"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_toStartOf="@id/textRouteCount"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/qr_code_icon"
+                    android:contentDescription="@string/loading"/>
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5.1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/busNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textSize="@dimen/action_header"
+                        android:textAllCaps="true"
+                        android:layout_marginStart="20dp"
+                        android:text="HR 05 ES 2650"
+                        android:background="@drawable/text_field_outline_black"/>
+
+                    <TextView
+                        android:id="@+id/busName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/busNo"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/main_header"
+                        android:text="Swaraj Mazda"/>
+
+                    <TextView
+                        android:id="@+id/busStartFromOrigin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_below="@id/busName"
+                        android:layout_marginTop="10dp"
+                        android:textSize="@dimen/main_sub_header"
+                        android:text="My Roko will start from origin at 05:00 PM"/>
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight=".01"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/busArrivalOnStop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/via_header"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:text="06:50 PM"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/main_header"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="(Approx)"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cancelHelpLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/cancelRideLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@color/lighter_gray"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:weightSum="2.5">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:contentDescription="@string/loading"
+                    android:src="@drawable/cancel_ride_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/main_header"
+                    android:text="Want to cancel ride ?"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:id="@+id/helpLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@color/lighter_gray"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:weightSum="2.5">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:contentDescription="@string/loading"
+                    android:src="@drawable/help_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/main_header"
+                    android:text="Need help ?"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrowMark"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/loading"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

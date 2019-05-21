@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cat_grad"
+    android:layout_centerHorizontal="true"
+    tools:context=".activity.BookingConfirm">
+
+    <ImageView
+        android:id="@+id/iVv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/check_white"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/iVv"
+        android:textSize="35sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="Seat Reserved"/>
+
+    <TextView
+        android:id="@+id/textDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvTitle"
+        android:textColor="@color/white"
+        android:textSize="@dimen/main_header"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/buttonGotIt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:textSize="@dimen/action_header"
+        android:textColor="@color/black"
+        android:text="GOT IT !"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_rectangle_white"
+        android:layout_marginBottom="30dp"/>
+
+</RelativeLayout>

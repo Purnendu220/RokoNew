@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/book_ride"
+            android:icon="@drawable/book_ride"
+            android:title="@string/book_ride" />
+
+        <item
+            android:id="@+id/my_passes"
+            android:icon="@drawable/my_pass"
+            android:title="@string/my_pass" />
+
+        <item
+            android:id="@+id/my_trips"
+            android:icon="@drawable/my_trips"
+            android:title="@string/my_trip" />
+
+        <item
+            android:id="@+id/route_map"
+            android:icon="@drawable/route_map"
+            android:title="@string/route_map" />
+
+        <item
+            android:id="@+id/notification"
+            android:icon="@android:drawable/stat_notify_chat"
+            android:title="@string/notifications" />
+
+        <item
+            android:id="@+id/drawer_share"
+            android:icon="@drawable/ic_share"
+            android:title="@string/drawer_share" />
+
+        <item
+            android:id="@+id/drawer_sos"
+            android:icon="@drawable/sos"
+            android:title="@string/sos" />
+
+        <item
+            android:id="@+id/drawer_rental"
+            android:icon="@drawable/rental"
+            android:title="@string/rental" />
+
+        <item
+            android:id="@+id/drawer_suggest_route"
+            android:icon="@drawable/suggest_route"
+            android:title="@string/suggest_route" />
+
+        <item
+            android:id="@+id/drawer_feedback"
+            android:icon="@drawable/feedback"
+            android:title="@string/feedback" />
+
+        <item
+            android:id="@+id/drawer_coupon"
+            android:icon="@drawable/coupon"
+            android:title="@string/my_coupons" />
+
+        <!--<item
+            android:id="@+id/qrScanner"
+            android:title="@string/scan" />-->
+
+        <!--<item
+            android:id="@+id/drawer_exit"
+            android:icon="@drawable/ic_exit"
+            android:title="@string/drawer_exit" />-->
+
+    </group>
+</menu>
